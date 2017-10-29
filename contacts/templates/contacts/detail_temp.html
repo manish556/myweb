@@ -1,0 +1,21 @@
+{% extends 'contacts/base.html' %}
+
+{% block title %} Contact Details {% endblock %}
+
+{% block body %}
+
+
+
+    <h1>{{object.contact_name}}</h1>
+    <h3>{{object.email}}</h3>
+    <img src="{{object.photo.url}}" alt="{{object.contact_name}}" style="width:250px;height:250px;">
+    <br><br>
+    {% for number in object.numbers_set.all %}
+        {{number.number_type}} - {{number.phone_number}} <br>
+    {% endfor %}
+
+        <a href="{% url 'contacts:contacts-add' %}">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Numbers
+        </a>
+
+{% endblock %}
