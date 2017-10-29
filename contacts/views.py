@@ -118,7 +118,7 @@ class NumbersUpdate(UpdateView):
 
 class NumbersDelete(DeleteView):
     model = Numbers
-
+#hekki
     def get_success_url(self):
         return reverse_lazy('contacts:detail', kwargs={'slug': self.get_object().contact.slug})
 
