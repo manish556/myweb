@@ -20,7 +20,7 @@ from .forms import UserForm, NumbersForm, ContactsForm
 
 #    def get_queryset(self, **kwargs):
 #        return Contacts.objects.all
-
+# hi
 
 def index(request):
     if not request.user.is_authenticated():
